@@ -135,9 +135,7 @@ public class NQueens {
       int n = 5;
       int[][] array = new int[n][n];
       if(NQueens(array, n))
-      {
-          System.out.println("Yes");
-          
+      {          
           for(int i=0;i<array.length;i++)
           {
               for(int j=0;j<array[0].length;j++)
@@ -149,7 +147,7 @@ public class NQueens {
       }
       else
       {
-    	  System.out.println("NO");
+    	  System.out.println("Not possible");
       }
 
        
