@@ -1,4 +1,4 @@
-package com.mahesh.data_structures.arrays;
+package com.mahesh.data_structures.arrays.OneD;
 
 import java.util.Scanner;
 
