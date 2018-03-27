@@ -1,33 +1,28 @@
 package com.mahesh.data_structures.arrays;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Hamiltonian_and_Lagrangian_E {
 
     
     private static void printSol(int[] inputArray, int n)
-    {
-           	for(int i=0; i<n; i++)
-    	{
-    		int temp = inputArray[i];
-    		boolean ans = true;
-    		for(int j=i+1; j<n; j++)
-    		{
-    			if(temp<inputArray[j])
-    			{
-    			ans = false;
-    			break;
-    			}
-    		}
-    		if(ans)
-    		{
-    			System.out.print(temp);
-    			if(i!=n-1)
-    			{
-    				System.out.print(" ");
-    			}
-    		}
-    	}
+	{
+    	int max=0;
+    	List<Integer>ans = new ArrayList<>();
+		for (int i = n - 1; i >= 0; i--) {
+			if(inputArray[i]>= max)
+			{
+				ans.add(inputArray[i]);
+				max = inputArray[i];
+			}
+		}
+		
+		for(int i=ans.size()-1; i>=0;i--)
+		{
+			System.out.print(ans.get(i)+" ");
+		}
     }
     
     public static void main(String args[] ) throws Exception {
